@@ -1,0 +1,196 @@
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    overflow: hidden;
+}
+
+.sidebar {
+    background-color: #cbf0ff;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    width: 200px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sidebar.collapsed {
+    width: 50px;
+}
+
+.sidebar.collapsed .tab span,
+.sidebar.collapsed .sidebar-title {
+    display: none;
+}
+
+.sidebar-header {
+    background-color: #2980b9;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-title {
+    margin-left: 15px;
+}
+
+.menu-icon {
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.tab.logout {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.tab:hover {
+    background-color: #ffffff;
+}
+
+.tab img {
+    margin-right: 10px;
+}
+
+.main {
+    background-color: #ecf5fa;
+    flex: 1;
+    padding: 20px;
+}
+
+.card-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.card-header {
+    display: block;
+    background-color: #cbf0ff;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: 100;
+    /* border-radius: 10px; */
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    color: #555;
+    font-family: "Gill Sans", sans-serif;
+    margin-left: 5px;
+}
+
+.card-content input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Style the container using flexbox */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Style the checkbox input */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* Style the checkbox label (optional) */
+label.checkbox-label {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+#togglePassword-button {
+    background-color: #cecece;
+    color: #000000;
+    border: none;
+    padding: 6px 6px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px;
+    width: 130px;
+}
+
+.table-card {
+    display: flex;
+    justify-content: center;
+    /* align-items: center;  */
+    /* overflow-x: auto;  */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Gill Sans", sans-serif;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+.table-card input[type="text"],
+select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
