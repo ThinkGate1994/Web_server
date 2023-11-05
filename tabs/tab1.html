@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tab1</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style_tab1.css" />
+</head>
+<body>
+    <div class="card-container">
+        <div class="card-header">
+            <h2>Wifi Configuration</h2>
+        </div>
+        <div class="card-content">
+            <h3>SSID</h3>
+            <input type="text" id="ssid" placeholder="Enter SSID" required>
+        </div>
+        <div class="card-content">
+            <h3>Password</h3>
+            <input type="password" id="password" placeholder="Enter Password" required>
+        </div>
+        <div class="card-header">
+            <h2>IP Configuration</h2>
+        </div>
+        <div class="radio-content">
+            <input type="radio" name="ipConfig" id="dynamic" value="dynamic" checked>
+            <label for="dynamic">Dynamic (DHCP)</label>
+        </div>
+        <div class="radio-content">
+            <input type="radio" name="ipConfig" id="static" value="static">
+            <label for="static">Static</label>
+        </div>
+        <div class="card-content static-config" style="display: none;">
+            <h3>IP Address</h3>
+            <div class="input-config">
+                <input type="text" id="staticIp1" placeholder="Enter IP1">
+                <input type="text" id="staticIp2" placeholder="Enter IP2">
+                <input type="text" id="staticIp3" placeholder="Enter IP3">
+                <input type="text" id="staticIp4" placeholder="Enter IP4">
+            </div>
+        </div>
+        <div class="card-content static-config" style="display: none;">
+            <h3>Gateway</h3>
+            <div class="input-config">
+                <input type="text" id="gateway1" placeholder="Enter GW1">
+                <input type="text" id="gateway2" placeholder="Enter GW2">
+                <input type="text" id="gateway3" placeholder="Enter GW3">
+                <input type="text" id="gateway4" placeholder="Enter GW4">
+            </div>
+        </div>
+        <div class="card-footer">
+            <button class="reset-button">Reset</button>
+            <button class="save-button">Save</button>
+        </div>
+    </div>
+
+    <script src="../scripts/script_tab1.js"></script>
+</body>
+</html>

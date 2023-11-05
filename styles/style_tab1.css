@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+} */
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebefef;
+}
+
+.card-header {
+    display: block;
+    text-align: center;
+    background-color: #bfff00;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content h3 {
+    color: #555;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+.card-content input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.radio-content {
+    display: block;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.input-config {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-config input{
+    flex: 1; 
+    margin: 0 5px; 
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.reset-button {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 10px 10px;
+    width: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.save-button {
+    background-color: #14c60b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 5px 10px;
+    width: 100px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #000000; 
+}
+
+.save-button:hover {
+    background-color: #000000; 
+}

@@ -9,133 +9,32 @@
 </head>
 
 <body>
+
     <div class="sidebar">
         <div class="sidebar-header">
             <div id="sidebar-toggle" class="menu-icon">&equiv;</div>
-            <span class="sidebar-title">ThinkGate</span>
+            <span class="sidebar-title">THYNKEDGE</span>
         </div>
-        <div class="tab" onclick="openTab('tab1')">
+        <div class="tab">
             <img src="images/wifi_icon.png" alt="wifi_icon">
-            <span>Wifi Configuration</span>
+            <span>Network</span>
         </div>
-        <div class="tab" onclick="openTab('tab2')">
+        <div class="tab">
             <img src="images/device_icon.png" alt="device_icon">
-            <span>Device Configuration</span>
+            <span>Device</span>
         </div>
         <div class="tab logout">
             <img src="images/logout_icon.png" alt="logout_icon">
             <span>Logout</span>
         </div>
     </div>
-
-    <main class="main">
-        <div id="tab1">
-            <div class="card-container">
-                <div class="card-header">
-                    <h2>Wifi Settings</h2>
-                </div>
-                <div class="card-content">
-                    <h3>Username</h3>
-                    <input type="text" id="usernameInput" placeholder="Enter Wifi Username">
-                </div>
-                <div class="card-content">
-                    <h3>Password</h3>
-                    <input type="password" id="passwordInput" placeholder="Enter Wifi Password">
-                    <button id="togglePassword-button" type="button">Show Password</button>
-                </div>
-            </div>
-        </div>
-
-        <div id="tab2" style="display: none;">
-            <div class="card-container">
-                <div class="card-header">
-                    <h2>Device Settings</h2>
-                </div>
-                <div class="card-content">
-                    <h3>Temperature Sensor</h3>
-                    <div class="checkbox-container">
-                        <input type="checkbox">
-                        <label class="checkbox-label">Activate Temperature Sensor</label>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>Humidity Sensor</h3>
-                    <div class="checkbox-container">
-                        <input type="checkbox">
-                        <label class="checkbox-label">Activate Humidity Sensor</label>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <h3>Modbus RS485</h3>
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="enableModbus">
-                        <label class="checkbox-label">Activate Modbus RS485</label>
-                    </div>
-                </div>
-                <div class="modbus-table" id="modbusTable">
-                    <br>
-                    <div class="card-header">
-                        <h2>Device Settings</h2>
-                    </div>
-                    <div class="table-card">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>slaveID</th>
-                                    <th>Function code</th>
-                                    <th>Start register</th>
-                                    <th>Data type</th>
-                                    <th>Magnitude</th>
-                                    <th>Offset</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td><input type="text"></td>
-                                    <td>
-                                        <select class="function-code-dropdown">
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                        </select>
-                                    </td>
-                                    <td><input type="text"></td>
-                                    <td>
-                                        <select class="data-type-dropdown">
-                                            <option value="int8">int8</option>
-                                            <option value="uint8">uint8</option>
-                                            <option value="int16">int16</option>
-                                            <option value="uint16">uint16</option>
-                                            <option value="int32-inverse">int32 inverse (Big-endian)</option>
-                                            <option value="uint32-inverse">uint32 inverse (Big-endian)</option>
-                                            <option value="int32-little-endian">int32 (Little-endian byte swap)</option>
-                                            <option value="uint32-little-endian">uint32 (Little-endian byte swap)</option>
-                                            <option value="float-inverse">float inverse (Big-endian)</option>
-                                            <option value="float-little-endian">float (Little-endian byte swap)</option>
-                                            <option value="int64-inverse">int64 inverse (Big-endian)</option>
-                                            <option value="uint64-inverse">uint64 inverse (Big-endian)</option>
-                                            <option value="int64-little-endian">int64 (Little-endian byte swap)</option>
-                                            <option value="uint64-little-endian">uint64 (Little-endian byte swap)</option>
-                                            <option value="double-inverse">double inverse (Big-endian)</option>
-                                            <option value="double-little-endian">double (Little-endian byte swap)</option>
-                                        </select>
-                                    </td>
-                                    <td><input type="text"></td>
-                                    <td><input type="text"></td>
-                                    <td><button class="delete-button" onclick="deleteRow(this)">Delete</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                        <button onclick="addRow()">Add Row</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+    
+    <main>
+        <iframe src="tabs/tab1.html" frameborder="0" width="100%" height="100%"></iframe>
     </main>
-    <script src="scripts/script.js"></script>
+    
+    <script src="scripts/script_index.js"></script>
+
 </body>
 
 </html>
