@@ -3,9 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>tab2</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style_tab2.css" />
 </head>
 <body>
-    
+    <div class="card-container">
+        <div class="card-header">
+            <h2>Device Configuration</h2>
+        </div>
+        <div class="card-content">
+            <div class="card-labels">
+                <label class="checkbox-label">Temperature Sensor</label>
+                <label class="checkbox-label">Humidity Sensor</label>
+                <label class="checkbox-label">Modbus RS485</label>
+            </div>
+            <div class="card-labels">
+                <input type="checkbox" id="check_temp">
+                <input type="checkbox" id="check_humi">
+                <input type="checkbox" id="enableModbus">
+            </div>
+        </div>
+
+        <!-- <div class="modbus-table" id="modbusTable">
+            <br>
+            <div class="card-header">
+                <h2>Modbus Configuration</h2>
+            </div>
+            <div class="table-card">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>slaveID</th>
+                            <th>Function code</th>
+                            <th>Start register</th>
+                            <th>Data type</th>
+                            <th>Magnitude</th>
+                            <th>Offset</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text"></td>
+                            <td>
+                                <select class="function-code-dropdown">
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </td>
+                            <td><input type="text"></td>
+                            <td>
+                                <select class="data-type-dropdown">
+                                    <option value="int8">int8</option>
+                                    <option value="uint8">uint8</option>
+                                    <option value="int16">int16</option>
+                                    <option value="uint16">uint16</option>
+                                    <option value="int32-inverse">int32 inverse (Big-endian)</option>
+                                    <option value="uint32-inverse">uint32 inverse (Big-endian)</option>
+                                    <option value="int32-little-endian">int32 (Little-endian byte swap)</option>
+                                    <option value="uint32-little-endian">uint32 (Little-endian byte swap)</option>
+                                    <option value="float-inverse">float inverse (Big-endian)</option>
+                                    <option value="float-little-endian">float (Little-endian byte swap)</option>
+                                    <option value="int64-inverse">int64 inverse (Big-endian)</option>
+                                    <option value="uint64-inverse">uint64 inverse (Big-endian)</option>
+                                    <option value="int64-little-endian">int64 (Little-endian byte swap)</option>
+                                    <option value="uint64-little-endian">uint64 (Little-endian byte swap)</option>
+                                    <option value="double-inverse">double inverse (Big-endian)</option>
+                                    <option value="double-little-endian">double (Little-endian byte swap)</option>
+                                </select>
+                            </td>
+                            <td><input type="text"></td>
+                            <td><input type="text"></td>
+                            <td><button class="delete-button" onclick="deleteRow(this)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <button onclick="addRow()">Add Row</button>
+            </div>
+        </div> -->
+    </div>
 </body>
 </html>

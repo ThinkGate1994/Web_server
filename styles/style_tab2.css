@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: block;
+    flex-direction: row;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebefef;
+}
+
+.card-header {
+    display: block;
+    text-align: center;
+    background-color: #bfff00;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card-labels{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: 'Poppins', sans-serif;
+}
+
+.checkbox-label{
+    padding: 5px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+/* Style the checkbox label (optional) */
+/* label.checkbox-label {
+    font-size: 16px;
+    margin-left: 5px;
+} */
+
+/* #togglePassword-button {
+    background-color: #cecece;
+    color: #000000;
+    border: none;
+    padding: 6px 6px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 5px;
+    width: 130px;
+} */
+
+/* .table-card {
+    display: flex;
+    justify-content: center;
+    /* align-items: center;  */
+    /* overflow-x: auto;  */
+/* } */ 
+
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Gill Sans", sans-serif;
+} */
+
+/* th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+} */
+
+/* th {
+    background-color: #f2f2f2;
+} */
+
+/* tr:nth-child(even) {
+    background-color: #f2f2f2;
+} */
+
+/* tr:hover {
+    background-color: #ddd;
+} */
+
+/* .table-card input[type="text"],
+select {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+} */
+
+/* .delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+} */
+
+/* .delete-button:hover {
+    background-color: #d32f2f;
+} */

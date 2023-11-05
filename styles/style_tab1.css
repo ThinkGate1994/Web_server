@@ -4,12 +4,11 @@
     box-sizing: border-box;
 }
 
-/* body {
-    height: 100vh;
+body {
     margin: 0;
-    display: flex;
+    display: block;
     flex-direction: row;
-} */
+}
 
 .card-container {
     display: flex;
@@ -105,4 +104,24 @@ input[type="password"] {
 
 .save-button:hover {
     background-color: #000000; 
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Stack sidebar and main content for smaller screens */
+    }
+
+    .card-content input[type="text"],
+    input[type="password"] {
+        width: 100%; 
+        margin: 5px 0; 
+    }
+
+    .input-config {
+        flex-direction: column; 
+    }
+
+    .input-config input {
+        width: 100%; 
+    }
 }

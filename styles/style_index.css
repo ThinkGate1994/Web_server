@@ -55,7 +55,7 @@ body {
     width: 210px;
     padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.1s;
 }
 
 .tab.logout {
@@ -82,47 +82,37 @@ main {
     margin: 50px;
 }
 
+.selected-tab {
+    background-color: #bfff00; 
+}
+
 /* Apply mobile-friendly styles for screens with a max-width of 768px */
 @media (max-width: 768px) {
     body {
         flex-direction: column; /* Stack sidebar and main content for smaller screens */
     }
 
+    main {
+        margin: 0;
+    }
+
     .sidebar {
-        width: 100%; /* Take up the full width on smaller screens */
+        width: 100%; 
     }
 
     .sidebar.collapsed {
-        width: 100%; /* Keep it full width when collapsed */
+        width: 100%; 
     }
 
     .tab {
-        width: 100%; /* Make the tabs full width on smaller screens */
+        width: 100%;
     }
 
     .tab.logout {
-        margin-top: 10px; /* Add some space between the last tab and the logout tab */
+        margin-top: 10px; 
     }
 
     .tab img {
-        margin-right: 5px; /* Reduce the margin for icons */
-    }
-
-    .card-container {
-        margin: 20px; /* Increase the margin for card containers */
-    }
-
-    .card-content input[type="text"],
-    input[type="password"] {
-        width: 100%; /* Make the inputs full width on smaller screens */
-        margin: 5px 0; /* Add vertical margin between inputs */
-    }
-
-    .input-config {
-        flex-direction: column; /* Stack input fields for static IP and gateway vertically on smaller screens */
-    }
-
-    .input-config input {
-        width: 100%; /* Make the inputs full width within their container */
+        margin-right: 5px; 
     }
 }
