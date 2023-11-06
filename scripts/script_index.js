@@ -6,35 +6,48 @@ menuIcon.addEventListener('click', () => {
     sidebar.classList.toggle('collapsed');
 });
 
-// identify selected tab and show content of related tab
-const tab1Iframe = document.getElementById('tab1');
-const tab2Iframe = document.getElementById('tab2');
-const networkTab = document.querySelector('.tab:nth-child(2)');
-const deviceTab = document.querySelector('.tab:nth-child(3)');
+const iframes = document.querySelectorAll('iframe'); // Select all iframes
+const tabs = document.querySelectorAll('.tab'); // Select all tabs
 
-// Initially, hide the tab2 iframe
-tab2Iframe.style.display = 'none';
-networkTab.classList.add('selected-tab');
+// Function to initialize the tab selection
+function initializeTabs() {
+    iframes.forEach((iframe, index) => {
+        if (index === 0) {
+            iframe.style.display = 'block';
+        } else {
+            iframe.style.display = 'none';
+        }
+    });
 
-networkTab.addEventListener('click', () => {
-    tab1Iframe.style.display = 'block';
-    tab2Iframe.style.display = 'none';
+    // Add the selected-tab class to the first tab by default
+    tabs[0].classList.add('selected-tab');
+}
+
+// Call the initialization function when the page loads
+initializeTabs();
+
+// Function to switch tabs
+function switchTab(selectedTab) {
+    const selectedIndex = parseInt(selectedTab.getAttribute('data-tab-index'));
+    
+    iframes.forEach((iframe, index) => {
+        if (index === selectedIndex) {
+            iframe.style.display = 'block';
+        } else {
+            iframe.style.display = 'none';
+        }
+    });
 
     // Add the selected-tab class to the current tab
-    networkTab.classList.add('selected-tab');
+    tabs.forEach(tab => tab.classList.remove('selected-tab'));
+    selectedTab.classList.add('selected-tab');
+}
 
-    // Remove the selected-tab class from the other tab
-    deviceTab.classList.remove('selected-tab');
+// Add click event listeners to all tabs
+tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        switchTab(tab);
+    });
 });
 
-deviceTab.addEventListener('click', () => {
-    tab1Iframe.style.display = 'none';
-    tab2Iframe.style.display = 'block';
-
-    // Add the selected-tab class to the current tab
-    deviceTab.classList.add('selected-tab');
-
-    // Remove the selected-tab class from the other tab
-    networkTab.classList.remove('selected-tab');
-});
 
