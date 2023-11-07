@@ -31,14 +31,14 @@ body {
     justify-content: space-around;
 }
 
-.card-labels{
-    display:flex;
+.card-labels {
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     font-family: 'Poppins', sans-serif;
 }
 
-.checkbox-label{
+.checkbox-label {
     padding: 5px;
 }
 
@@ -47,70 +47,90 @@ input[type="checkbox"] {
     height: 20px;
 }
 
-/* Style the checkbox label (optional) */
-/* label.checkbox-label {
+label.checkbox-label {
     font-size: 16px;
     margin-left: 5px;
-} */
+}
 
-/* #togglePassword-button {
-    background-color: #cecece;
-    color: #000000;
-    border: none;
-    padding: 6px 6px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin: 5px;
-    width: 130px;
-} */
-
-/* .table-card {
+.table-card {
     display: flex;
     justify-content: center;
-    /* align-items: center;  */
-    /* overflow-x: auto;  */
-/* } */ 
+}
 
-/* table {
+table {
     width: 100%;
     border-collapse: collapse;
     font-family: "Gill Sans", sans-serif;
-} */
+}
 
-/* th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 8px;
-    text-align: left;
-} */
+    text-align: center;
+}
 
-/* th {
+th {
     background-color: #f2f2f2;
-} */
+}
 
-/* tr:nth-child(even) {
+tr:nth-child(even) {
     background-color: #f2f2f2;
-} */
+}
 
-/* tr:hover {
+tr:hover {
     background-color: #ddd;
-} */
+}
 
-/* .table-card input[type="text"],
+.table-card input[type="text"],
 select {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
-} */
+}
 
-/* .delete-button {
+.delete-button {
     background-color: #f44336;
     color: white;
     border: none;
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 4px;
-} */
+    width: 60px;
+}
 
-/* .delete-button:hover {
+.delete-button:hover {
     background-color: #d32f2f;
-} */
+}
+
+.clear-button {
+    background-color: #36cef4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 60px;
+}
+
+.clear-button:hover {
+    background-color: #09ccfd;
+}
+
+.addrow {
+    display: flex;
+    justify-content: center;
+}
+
+.addrow-button {
+    background-color: #36bef4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.addrow-button:hover {
+    background-color: #00b7ff;
+}

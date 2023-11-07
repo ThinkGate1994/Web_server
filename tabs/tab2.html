@@ -24,8 +24,7 @@
             </div>
         </div>
 
-        <!-- <div class="modbus-table" id="modbusTable">
-            <br>
+        <div class="modbus-table" id="modbusTable">
             <div class="card-header">
                 <h2>Modbus Configuration</h2>
             </div>
@@ -33,7 +32,7 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>slaveID</th>
+                            <th>Slave ID</th>
                             <th>Function code</th>
                             <th>Start register</th>
                             <th>Data type</th>
@@ -44,14 +43,14 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><input type="text"></td>
+                            <td><input type="text" oninput="validateNumberInput(this)"></td>
                             <td>
                                 <select class="function-code-dropdown">
                                     <option value="3">3</option>
                                     <option value="4">4</option>
                                 </select>
                             </td>
-                            <td><input type="text"></td>
+                            <td><input type="text" oninput="validateNumberInput(this)"></td>
                             <td>
                                 <select class="data-type-dropdown">
                                     <option value="int8">int8</option>
@@ -72,17 +71,22 @@
                                     <option value="double-little-endian">double (Little-endian byte swap)</option>
                                 </select>
                             </td>
-                            <td><input type="text"></td>
-                            <td><input type="text"></td>
-                            <td><button class="delete-button" onclick="deleteRow(this)">Delete</button></td>
+                            <td><input type="text" oninput="validateNumberInput(this)"></td>
+                            <td><input type="text" oninput="validateNumberInput(this)"></td>
+                            <td>
+                                <button class="clear-button" onclick="clearRow(this)">Clear</button>
+                                <button class="delete-button" onclick="deleteRow(this)">Delete</button>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <div>
-                <button onclick="addRow()">Add Row</button>
+            <div class="addrow">
+                <button class="addrow-button" onclick="addRow()">Add Row</button>
             </div>
-        </div> -->
+        </div>
     </div>
+
+    <script src="../scripts/script_tab2.js"></script>
 </body>
 </html>
