@@ -26,20 +26,16 @@ body {
 }
 
 .card-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.card-labels {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    display: block;
     font-family: 'Poppins', sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
-.checkbox-label {
+.label-checkbox {
     padding: 5px;
+    display: flex;
+    justify-content:space-between;
 }
 
 input[type="checkbox"] {
@@ -47,9 +43,16 @@ input[type="checkbox"] {
     height: 20px;
 }
 
-label.checkbox-label {
-    font-size: 16px;
-    margin-left: 5px;
+.label-select {
+    padding: 5px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.label-select select {
+    width: 30%;
+    /* padding: 5px; */
+    box-sizing: border-box;
 }
 
 .table-card {
@@ -83,7 +86,7 @@ tr:hover {
 }
 
 .table-card input[type="text"],
-select {
+.table-card select {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;

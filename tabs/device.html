@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tab2</title>
-    <link rel="stylesheet" type="text/css" href="../styles/style_tab2.css" />
+    <title>device page</title>
+    <link rel="stylesheet" type="text/css" href="../styles/style_device.css" />
 </head>
 <body>
     <div class="card-container">
@@ -12,21 +12,64 @@
             <h2>Device Configuration</h2>
         </div>
         <div class="card-content">
-            <div class="card-labels">
-                <label class="checkbox-label">Temperature Sensor</label>
-                <label class="checkbox-label">Humidity Sensor</label>
-                <label class="checkbox-label">Modbus RS485</label>
-            </div>
-            <div class="card-labels">
+            <div class="label-checkbox">
+                <label>Temperature Sensor</label>
                 <input type="checkbox" id="check_temp">
-                <input type="checkbox" id="check_humi">
-                <input type="checkbox" id="enableModbus">
             </div>
+            <div class="label-checkbox">
+                <label>Humidity Sensor</label>
+                <input type="checkbox" id="check_humi">
+            </div>
+            <div class="label-checkbox">
+                <label>Modbus RS485</label>
+                <input type="checkbox" id="enableModbus">
+            </div>                           
         </div>
 
         <div class="modbus-table" id="modbusTable">
             <div class="card-header">
                 <h2>Modbus Configuration</h2>
+            </div>
+            <div class="card-content">
+                <div class="card-labels">
+                    <div class="label-select">
+                        <label>Baudrate</label>
+                        <select class="baudrate-dropdown">
+                            <option value="300">300</option>
+                            <option value="600">600</option>
+                            <option value="1200">1200</option>
+                            <option value="2400">2400</option>
+                            <option value="4800">4800</option>
+                            <option value="9600">9600</option>
+                            <option value="14400">14400</option>
+                            <option value="19200">19200</option>
+                            <option value="38400">38400</option>
+                            <option value="56000">56000</option>
+                            <option value="57600">57600</option>
+                            <option value="115200">115200</option>
+                        </select>
+                    </div>
+                    <div class="label-select">
+                        <label>Data bits</label>
+                        <select class="databits-dropdown">
+                            <option value="8">8</option>
+                        </select>
+                    </div>
+                    <div class="label-select">
+                        <label>Parity</label>
+                        <select class="parity-dropdown">
+                            <option value="0">None</option>
+                            <option value="1">Odd</option>
+                            <option value="2">Even</option>
+                        </select>
+                    </div>
+                    <div class="label-select">
+                        <label>Stop bit</label>
+                        <select class="stopbit-dropdown">
+                            <option value="1">1</option>
+                        </select>                     
+                    </div>
+                </div>
             </div>
             <div class="table-card">
                 <table>
@@ -87,6 +130,6 @@
         </div>
     </div>
 
-    <script src="../scripts/script_tab2.js"></script>
+    <script src="../scripts/script_device.js"></script>
 </body>
 </html>
