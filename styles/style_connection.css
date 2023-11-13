@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    display: block;
+    flex-direction: row;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ebefef;
+}
+
+.card-header {
+    display: block;
+    text-align: center;
+    background-color: #bfff00;
+    color: #000000;
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.host-settings {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.host-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}

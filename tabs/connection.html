@@ -1,22 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>connection page</title>
-    <link rel="stylesheet" type="text/css" href="../styles/style_network.css" />
+    <link rel="stylesheet" type="text/css" href="../styles/style_connection.css" />
 </head>
+
 <body>
     <div class="card-container">
         <div class="card-header">
             <h2>MQTT Configuration</h2>
         </div>
         <div class="card-content">
-            <label for="protocol">Protocol</label>
-            <option value=""></option>
+            <div class="host-settings">
+                <div class="host-content">
+                    <div class="content">
+                        <label for="protocol">Protocol</label>
+                        <select id="protocol">
+                            <option value="">mqtt://</option>
+                            <option value="">mqtts://</option>
+                        </select>
+                    </div>
+                    <div class="content">
+                        <label for="clientid">Client ID</label>
+                        <input id="clientid" type="text">
+                    </div>
+                </div>
+                <div class="host-content">
+                    <div class="content">
+                        <label for="host">Host</label>
+                        <input type="text">
+                    </div>
+                    <div class="content">
+                        <label for="alivetime">Keep alive time</label>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="host-content">
+                    <div class="content">
+                        <label for="port">Port</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
     <script src="../scripts/script_network.js"></script>
 </body>
+
 </html>
