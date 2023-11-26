@@ -9,14 +9,15 @@ body {
     margin: 0;
     display: flex;
     flex-direction: row;
+    background-color:#f7f7f9;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
     width: 210px;
-    background-color: #ebefef;
-    color: #000000;
+    background-color: #E5E7EB;
+    color: #161717;
     font-family: 'Poppins', sans-serif;
     transition: all 0.1s;
 }
@@ -24,7 +25,7 @@ body {
 .sidebar-header {
     display: flex;
     align-items: center;
-    background-color: #050505;
+    background-color: #161717;
     color: #fff;
     padding: 10px;
     font-family: 'Poppins', sans-serif;
@@ -52,7 +53,6 @@ body {
 .tab {
     display: flex;
     align-items: center;
-    /* width: 210px; */
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.1s;
@@ -79,8 +79,7 @@ body {
 
 main {
     flex: 1;
-    background-color: #ffffff;
-    margin: 50px;
+    background-color: #f4f5f7;
 }
 
 .selected-tab {

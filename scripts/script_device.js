@@ -1,15 +1,23 @@
 function addRow() {
     const table = document.querySelector('#modbusTable table tbody');
+    // console.log(table);
+
     if (table.rows.length >= 30) {
         alert("You've reached the maximum limit of rows (30).");
         return;
     }
+
     const newRow = table.insertRow(table.rows.length);
-    const cells = Array.from({ length: 7 }, () => newRow.insertCell());
+    const cells = Array.from({ length: 8 }, () => newRow.insertCell());
+
+    // console.log(newRow);
+    // console.log(cells);
+
     cells.forEach((cell, index) => {
-        if (index === 6) {
+        if (index === 7) {
             cell.innerHTML = '<button class="clear-button" onclick="clearRow(this)">Clear</button> <button class="delete-button" onclick="deleteRow(this)">Delete</button>';
-        } else if (index === 1) {
+        }
+        else if (index === 2) {
             const selectFunctionCode = document.createElement('select');
             selectFunctionCode.className = 'function-code-dropdown';
             selectFunctionCode.innerHTML = `
@@ -17,7 +25,8 @@ function addRow() {
                 <option value="4">4</option>
             `;
             cell.appendChild(selectFunctionCode);
-        } else if (index === 3) {
+        }
+        else if (index === 4) {
             const selectDataType = document.createElement('select');
             selectDataType.className = 'data-type-dropdown';
             selectDataType.innerHTML = `
@@ -39,24 +48,20 @@ function addRow() {
                 <option value="double-little-endian">double (Little-endian byte swap)</option>
             `;
             cell.appendChild(selectDataType);
-        } else {
+        }
+        else if (index == 0) {
             const input = document.createElement('input');
-            input.addEventListener('input', validateNumberInput);
+            // input.addEventListener('input', validateNumberInput);
             input.type = 'text';
             cell.appendChild(input);
         }
+        else {
+            const input = document.createElement('input');
+            // input.addEventListener('input', validateNumberInput);
+            input.type = 'number';
+            cell.appendChild(input);
+        }
     });
-}
-
-function validateNumberInput(event) {
-    const input = event.target;
-    const value = input.value;
-
-    // Use a regular expression to check if the input is a number (integer or decimal)
-    if (!/^\d*\.?\d*$/.test(value)) {
-        // If the input is not a number, remove any non-digit and non-decimal characters
-        input.value = value.replace(/[^\d.]/g, '');
-    }
 }
 
 function deleteRow(button) {
@@ -76,11 +81,78 @@ function clearRow(button) {
     });
 }
 
-// Add event listeners and validation for the input fields in the initial row
-document.addEventListener('DOMContentLoaded', function () {
-    const initialRow = document.querySelector('#modbusTable tbody tr');
-    const inputs = initialRow.querySelectorAll('input');
-    inputs.forEach((input) => {
-        input.addEventListener('input', validateNumberInput);
+function saveNetworkConfig() {
+    // Fetch device configuration data
+    const temperatureSensor = document.querySelector('#check_temp').checked;
+    const humiditySensor = document.querySelector('#check_humi').checked;
+    const modbusEnabled = document.querySelector('#enableModbus').checked;
+
+    // Fetch modbus configuration data
+    const baudrate = document.querySelector('.baudrate-dropdown').value;
+    const databits = document.querySelector('.databits-dropdown').value;
+    const parity = document.querySelector('.parity-dropdown').value;
+    const stopbit = document.querySelector('.stopbit-dropdown').value;
+
+    // Fetch table data
+    const table = document.querySelector('#modbusTable table tbody');
+    const rows = table.querySelectorAll('tr');
+    const columnData = Array.from({ length: 7 }, () => []);
+
+    rows.forEach((row) => {
+        const inputs = row.querySelectorAll('input, select');
+
+        inputs.forEach((input, index) => {
+            // Use the input's id or name, or fallback to the index
+            // const columnName = input.id || input.name || index.toString();
+            columnData[index].push(input.value);
+        });
     });
-});
+
+    // Combine all data into a single object
+    const allData = {
+        deviceConfig: {
+            temperatureSensor,
+            humiditySensor,
+            modbusEnabled,
+        },
+        modbusConfig: {
+            baudrate,
+            databits,
+            parity,
+            stopbit,
+        },
+        columnData: columnData,
+    };
+
+    // Convert the JavaScript object to a JSON string
+    const jsonString = JSON.stringify(allData);
+
+    // Fetch the content length
+    const contentLength = jsonString.length;
+
+    console.log(contentLength);
+    console.log(jsonString);
+
+    // Send the 'allData' object to the ESP web server
+    fetch('save-device-config', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Content-Length': contentLength.toString(), // Set the Content-Length header
+        },
+        body: jsonString,
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        // Handle success
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        // Handle error
+    });
+}
+
+
+
+

@@ -13,46 +13,66 @@ body {
 .card-container {
     display: flex;
     flex-direction: column;
-    background-color: #ebefef;
+    background-color: #ffffff;
+    border: 1px solid #dadddb;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .card-header {
     display: block;
     text-align: center;
     background-color: #bfff00;
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
+    color: #111827;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
     padding: 5px;
 }
 
 .card-content {
-    display: block;
-    font-family: 'Poppins', sans-serif;
-    margin-left: 100px;
-    margin-right: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 400px;
+}
+
+.card-content span {
+    color: #111827;
+    font-weight: lighter;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    padding: 5px;
+    margin-left: 3px;
 }
 
 .label-checkbox {
     padding: 5px;
     display: flex;
-    justify-content:space-between;
-}
-
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+    flex-direction: row;
+    width: 400px;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
 }
 
 .label-select {
     padding: 5px;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
 }
 
 .label-select select {
     width: 30%;
     /* padding: 5px; */
     box-sizing: border-box;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
 }
 
 .table-card {
@@ -63,7 +83,7 @@ input[type="checkbox"] {
 table {
     width: 100%;
     border-collapse: collapse;
-    font-family: "Gill Sans", sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 th,
@@ -86,10 +106,16 @@ tr:hover {
 }
 
 .table-card input[type="text"],
+.table-card input[type="number"],
 .table-card select {
     width: 100%;
     padding: 5px;
     box-sizing: border-box;
+}
+
+.action-button {
+    display: flex;
+    flex-direction: row;
 }
 
 .delete-button {
@@ -97,6 +123,7 @@ tr:hover {
     color: white;
     border: none;
     padding: 5px 10px;
+    margin: 5px;
     cursor: pointer;
     border-radius: 4px;
     width: 60px;
@@ -111,13 +138,14 @@ tr:hover {
     color: white;
     border: none;
     padding: 5px 10px;
+    margin: 5px;
     cursor: pointer;
     border-radius: 4px;
     width: 60px;
 }
 
 .clear-button:hover {
-    background-color: #09ccfd;
+    background-color: #44bddb;
 }
 
 .addrow {
@@ -136,4 +164,50 @@ tr:hover {
 
 .addrow-button:hover {
     background-color: #00b7ff;
+}
+
+.card-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.reset-button {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 10px 10px;
+    width: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.save-button {
+    background-color: #14c60b;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 10px 5px 10px;
+    width: 100px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #000000;
+}
+
+.save-button:hover {
+    background-color: #000000;
+}
+
+.invalid-input {
+    border: 1px solid red !important;
 }

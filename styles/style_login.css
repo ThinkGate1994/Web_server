@@ -10,10 +10,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #ffffff48, #ffffff);
+    /* background: #effff7; */
+
 }
 
 .login-container {
+    display: flex;
+    flex-direction: column;
     background-color: #bfff00;
     border-radius: 10px;
     padding: 20px;
@@ -23,7 +26,7 @@ body {
     margin: 0 auto;
 }
 
-h1 {
+span {
     font-size: 36px;
     color: #000000; 
     font-family: 'Poppins', sans-serif;
@@ -31,7 +34,8 @@ h1 {
 }
 
 .input-container {
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+    padding: 10px;
 }
 
 input[type="text"],
@@ -40,8 +44,8 @@ input[type="password"] {
     padding: 12px;
     border: none;
     border-radius: 10px;
-    border-bottom: 1px solid #3498db;
-    background-color: #f2f2f2;
+    border-bottom: 2px solid #007fc8;
+    background-color: #ffffff;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     transition: border-bottom 0.3s;
@@ -49,10 +53,10 @@ input[type="password"] {
 
 input[type="text"]:focus,
 input[type="password"]:focus {
-    border-bottom: 1px solid #3498db;
+    border-bottom: 3px solid #007fc8;
 }
 
-.submit-container input[type="submit"] {
+.login{
     background-color: #ffffff;
     color: #000000;
     padding: 12px 20px;
@@ -64,6 +68,13 @@ input[type="password"]:focus {
     transition: background-color 0.3s;
 }
 
-.submit-container input[type="submit"]:hover {
+.login:hover {
     background-color: #bde5ff;
+}
+
+.error-message {
+    color: #ff0000; 
+    font-family: 'Poppins', sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

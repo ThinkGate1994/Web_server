@@ -11,7 +11,7 @@
 <body>
     <div class="card-container">
         <div class="card-header">
-            <h2>MQTT Configuration</h2>
+            <span>MQTT Configuration</span>
         </div>
         <div class="card-content">
             <div class="host-settings">
@@ -19,36 +19,92 @@
                     <div class="content">
                         <label for="protocol">Protocol</label>
                         <select id="protocol">
-                            <option value="">mqtt://</option>
-                            <option value="">mqtts://</option>
+                            <option value="mqtt://">mqtt://</option>
+                            <option value="mqtts://">mqtts://</option>
                         </select>
                     </div>
                     <div class="content">
-                        <label for="clientid">Client ID</label>
-                        <input id="clientid" type="text">
-                    </div>
-                </div>
-                <div class="host-content">
-                    <div class="content">
                         <label for="host">Host</label>
-                        <input type="text">
+                        <input type="text" id="host">
                     </div>
-                    <div class="content">
-                        <label for="alivetime">Keep alive time</label>
-                        <input type="text">
-                    </div>
-                </div>
-                <div class="host-content">
                     <div class="content">
                         <label for="port">Port</label>
-                        <input type="text">
+                        <input type="number" id="port">
+                    </div>
+                </div>
+            </div>
+            <div class="host-settings">
+                <div class="host-content">
+                    <div class="content">
+                        <label for="client_id">Client ID</label>
+                        <input type="text" id="client_id">
+                    </div>
+                    <div class="content">
+                        <label for="keep_alive_time">Keep-alive time</label>
+                        <input type="number" id="keep_alive_time">
+                    </div>
+                </div>
+            </div>
+            <div class="client-settings">
+                <div class="client-content">
+                    <input type="checkbox" id="enable_user_pass">
+                    <label for="enable_user_pass">Enable username and password</label>
+                </div>
+            </div>
+            <div class="client-settings user_pass-config" style="display: none;">
+                <div class="client-content">
+                    <div class="content">
+                        <label for="username">Username</label>
+                        <input type="text" id="username">
+                    </div>
+                    <div class="content">
+                        <label for="password">Password</label>
+                        <input type="text" id="password">
+                    </div>
+                </div>
+            </div>
+            <div class="client-settings">
+                <div class="client-content">
+                    <input type="checkbox" id="enable_will_msg">
+                    <label for="enable_will_msg">Enable Last-Will message</label>
+                </div>
+            </div>
+            <div class="client-settings will_msg-config" style="display: none;">
+                <div class="client-content">
+                    <div class="content">
+                        <label for="Last-Will-topic">Last-Will Topic</label>
+                        <input type="text" id="Last-Will-topic">
+                    </div>
+                    <div class="content">
+                        <label for="Last-Will-Qos">Last-Will QoS</label>
+                        <select id="Last-Will-Qos">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                    <div class="content">
+                        <label for="Last-Will-Retain">Last-Will Retain</label>
+                        <input type="checkbox" id="Last-Will-Retain">
+                    </div>
+                </div>
+            </div>
+            <div class="client-settings will_msg-config" style="display: none;">
+                <div class="client-content">
+                    <div class="content">
+                        <label for="Last-Will-message">Last-Will message</label>
+                        <input type="text" id="Last-Will-message">
                     </div>
                 </div>
             </div>
         </div>
+        <div class="card-footer">
+            <button class="reset-button" onclick="resetInputs()">Reset</button>
+            <button class="save-button" type="button" onclick="saveConnectionConfig()">Save</button>
+        </div>
     </div>
 
-    <script src="../scripts/script_network.js"></script>
+    <script src="../scripts/script_connection.js"></script>
 </body>
 
 </html>

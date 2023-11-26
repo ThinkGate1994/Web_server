@@ -9,19 +9,22 @@
 <body>
     <div class="card-container">
         <div class="card-header">
-            <h2>Wifi Configuration</h2>
+            <span>Wi-Fi Configuration</span>
         </div>
+        <br>
         <div class="card-content">
-            <h3>SSID</h3>
+            <span>SSID</span>
             <input type="text" id="ssid" placeholder="Enter SSID" required>
         </div>
         <div class="card-content">
-            <h3>Password</h3>
+            <span>Password</span>
             <input type="password" id="password" placeholder="Enter Password" required>
         </div>
+        <br>
         <div class="card-header">
-            <h2>IP Configuration</h2>
+            <span>IP Configuration</span>
         </div>
+        <br>
         <div class="radio-content">
             <input type="radio" name="ipConfig" id="dynamic" value="dynamic" checked>
             <label for="dynamic">Dynamic (DHCP)</label>
@@ -31,26 +34,34 @@
             <label for="static">Static</label>
         </div>
         <div class="card-content static-config" style="display: none;">
-            <h3>IP Address</h3>
+            <br>
+            <span>IP Address</span>
             <div class="input-config">
-                <input type="text" id="staticIp1" placeholder="Enter IP1">
-                <input type="text" id="staticIp2" placeholder="Enter IP2">
-                <input type="text" id="staticIp3" placeholder="Enter IP3">
-                <input type="text" id="staticIp4" placeholder="Enter IP4">
+                <input type="number" id="staticIp1" placeholder="Enter IP1">
+                <span>.</span>
+                <input type="number" id="staticIp2" placeholder="Enter IP2">
+                <span>.</span>
+                <input type="number" id="staticIp3" placeholder="Enter IP3">
+                <span>.</span>
+                <input type="number" id="staticIp4" placeholder="Enter IP4">
             </div>
         </div>
         <div class="card-content static-config" style="display: none;">
-            <h3>Gateway</h3>
+            <br>
+            <span>Gateway</span>
             <div class="input-config">
-                <input type="text" id="gateway1" placeholder="Enter GW1">
-                <input type="text" id="gateway2" placeholder="Enter GW2">
-                <input type="text" id="gateway3" placeholder="Enter GW3">
-                <input type="text" id="gateway4" placeholder="Enter GW4">
+                <input type="number" id="gateway1" placeholder="Enter GW1">
+                <span>.</span>
+                <input type="number" id="gateway2" placeholder="Enter GW2">
+                <span>.</span>
+                <input type="number" id="gateway3" placeholder="Enter GW3">
+                <span>.</span>
+                <input type="number" id="gateway4" placeholder="Enter GW4">
             </div>
         </div>
         <div class="card-footer">
-            <button class="reset-button">Reset</button>
-            <button class="save-button">Save</button>
+            <button class="reset-button" onclick="resetInputs()">Reset</button>
+            <button class="save-button" type="button" onclick="saveNetworkConfig()">Save</button>
         </div>
     </div>
 

@@ -13,42 +13,53 @@ body {
 .card-container {
     display: flex;
     flex-direction: column;
-    background-color: #ebefef;
+    background-color: #ffffff;
+    border: 1px solid #dadddb;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .card-header {
     display: block;
     text-align: center;
     background-color: #bfff00;
-    color: #000000;
-    font-family: 'Poppins', sans-serif;
+    color: #111827;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.5rem;
     padding: 5px;
 }
 
 .card-content {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
 }
 
-.card-content h3 {
-    color: #555;
-    font-family: 'Poppins', sans-serif;
+.card-content span {
+    color: #111827;
+    font-weight:lighter;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
     padding: 5px;
-    margin-left: 5px;
+    margin-left: 3px;
 }
 
 .card-content input[type="text"],
 input[type="password"] {
     padding: 10px;
     margin: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #b7b8bc;
     border-radius: 5px;
 }
 
 .radio-content {
     display: block;
     padding: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .input-config {
@@ -60,8 +71,9 @@ input[type="password"] {
     flex: 1; 
     margin: 0 5px; 
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #b7b8bc;
     border-radius: 5px;
+    min-width: 100px;
 }
 
 .card-footer{
@@ -79,7 +91,7 @@ input[type="password"] {
     padding: 5px;
     margin: 10px 10px 10px;
     width: 100px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     transition: background-color 0.3s;
 }
@@ -93,7 +105,7 @@ input[type="password"] {
     padding: 5px;
     margin: 10px 5px 10px;
     width: 100px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     transition: background-color 0.3s;
 }
@@ -106,9 +118,17 @@ input[type="password"] {
     background-color: #000000; 
 }
 
+.invalid-input {
+    border: 1px solid red !important;
+}
+
 @media (max-width: 768px) {
     body {
         flex-direction: column; /* Stack sidebar and main content for smaller screens */
+    }
+
+    .card-container {
+        margin: 0px;
     }
 
     .card-content input[type="text"],

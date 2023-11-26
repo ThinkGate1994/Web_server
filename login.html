@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" type="text/css" href="styles/style_login.css">
 </head>
+
 <body>
     <main>
         <div class="login-container">
-            <h1>Login</h1>
-            <form method="POST" action="/index.html">
-                <div class="input-container">
-                    <input type="text" id="username" placeholder="Username" required>
-                </div>
-                <div class="input-container">
-                    <input type="password" id="password" placeholder="Password" required>
-                </div>
-                <div class="submit-container">
-                    <input type="submit" value="Login">
-                </div>
-            </form>
+            <span>THYNKEDGE</span>
+            <div class="input-container">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="error-message" id="error-message"></div>
+            <div class="submit-container">
+                <button class="login" onclick="check_credentials()">Login</button>
+            </div>
         </div>
     </main>
+    <script src="scripts/script_login.js"></script>
 </body>
+
 </html>
